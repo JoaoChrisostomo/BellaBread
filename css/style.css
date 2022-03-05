@@ -182,8 +182,8 @@ h1, h2 {
 }
 
 .breadBig img {
-    height:400px;
-    width:auto;
+    width:350px;
+    height:350px;
 }
 
 .breadInfo {
@@ -257,7 +257,7 @@ h1, h2 {
 
 .breadInfo--qtarea {
     display:inline-flex;
-    background-color:#EEE;
+    background-color:rgb(218, 183, 70);
     border-radius:10px;
     height:30px;
 }
@@ -284,7 +284,7 @@ h1, h2 {
     margin-top:30px;
     padding:20px 30px;
     border-radius:20px;
-    background-color:#48d05f;
+    background-color:#d0a048b6;
     color:#FFF;
     display:inline-block;
     cursor:pointer;
@@ -292,7 +292,7 @@ h1, h2 {
 }
 
 .breadInfo--addButton:hover {
-    background-color:#32a345;
+    background-color:#1a1c1b;
 }
 
 .breadInfo--cancelButton {
