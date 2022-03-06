@@ -123,7 +123,7 @@ const adicionarAoCarrinho = () => {
         // quantidade
         console.log("Quant. " + quantBreads)
         // preco
-        let price = seleciona(".breadInfo--actualPrice").innerHTML.replace("R$&nbsp", "")
+        let price = seleciona(".breadInfo--actualPrice").innerHTML.replace("R$&nbsp;", "")
 
         // crie um identificador que junte id e tamanho
         // concatene as duas informacoes separadas por um símbolo, voce escolhe
@@ -181,6 +181,7 @@ const fecharCarrinho = () => {
     })
 }
 
+
 const atualizarCarrinho = () => {
     // exibir número de itens no carrinho
 	seleciona('.menu-openner span').innerHTML = cart.length
@@ -207,7 +208,7 @@ const atualizarCarrinho = () => {
 
             // em cada item pegar o subtotal
         	subtotal += cart[i].price * cart[i].qt
-            //console.log(cart[i].price)
+            console.log(cart[i].price)
 
 			// fazer o clone, exibir na telas e depois preencher as informacoes
 			let cartItem = seleciona('.models .cart--item').cloneNode(true)
