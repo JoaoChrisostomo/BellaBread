@@ -153,6 +153,7 @@ const adicionarAoCarrinho = () => {
         fecharModal()
         abrirCarrinho()
         atualizarCarrinho()
+        
     })
 }
 
@@ -188,16 +189,14 @@ const atualizarCarrinho = () => {
 	
 	// mostrar ou nao o carrinho
 	if(cart.length > 0) {
-
 		// mostrar o carrinho
 		seleciona('aside').classList.add('show')
-
 		// zerar meu .cart para nao fazer insercoes duplicadas
 		seleciona('.cart').innerHTML = ''
-
         // crie as variaveis antes do for
 		let subtotal = 0
-		let desconto = 0
+		let desconto = 0.10
+        let imposto  = 0
 		let total    = 0
 
         // para preencher os itens do carrinho, calcular subtotal
@@ -241,13 +240,12 @@ const atualizarCarrinho = () => {
 					// remover se for zero
 					cart.splice(i, 1)
 				}
-
+                
                 (cart.length < 1) ? seleciona('header').style.display = 'flex' : ''
 
 				// atualizar a quantidade
 				atualizarCarrinho()
 			})
-
 			seleciona('.cart').append(cartItem)
 
 		} // fim do for
@@ -255,14 +253,16 @@ const atualizarCarrinho = () => {
 		// fora do for
 		// calcule desconto 10% e total
 		//desconto = subtotal * 0.1
-		desconto = subtotal * 0
-		total = subtotal - desconto
+        
+		const valorDescontado = subtotal * desconto
+        const valorTotal = subtotal - valorDescontado
 
 		// exibir na tela os resultados
 		// selecionar o ultimo span do elemento
 		seleciona('.subtotal span:last-child').innerHTML = formatoReal(subtotal)
-		seleciona('.desconto span:last-child').innerHTML = formatoReal(desconto)
-		seleciona('.total span:last-child').innerHTML    = formatoReal(total)
+        seleciona('.total span:last-child').innerHTML    = formatoReal(total)
+		seleciona('.desconto span:last-child').innerHTML = formatoReal(valorDescontado)
+		seleciona('.total span:last-child').innerHTML    = formatoReal(valorTotal)
 
 	} else {
 		// ocultar o carrinho
