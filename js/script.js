@@ -196,7 +196,7 @@ const atualizarCarrinho = () => {
         // crie as variaveis antes do for
 		let subtotal = 0
 		let desconto = 0.10
-        let imposto  = 0
+        let imposto  = 0.02
 		let total    = 0
 
         // para preencher os itens do carrinho, calcular subtotal
@@ -252,16 +252,21 @@ const atualizarCarrinho = () => {
 
 		// fora do for
 		// calcule desconto 10% e total
-		//desconto = subtotal * 0.1
-        
+		//desconto = subtotal * 0.1  
 		const valorDescontado = subtotal * desconto
-        const valorTotal = subtotal - valorDescontado
+        console.log(valorDescontado)   
 
+        // IPI (imposto de produtos industrializados)
+        const impostoIpi = subtotal * imposto
+       
+        // valor final total do carrinho
+        const valorTotal = (subtotal - valorDescontado) - impostoIpi
+        console.log(valorTotal)
 		// exibir na tela os resultados
 		// selecionar o ultimo span do elemento
 		seleciona('.subtotal span:last-child').innerHTML = formatoReal(subtotal)
-        seleciona('.total span:last-child').innerHTML    = formatoReal(total)
 		seleciona('.desconto span:last-child').innerHTML = formatoReal(valorDescontado)
+        seleciona('.imposto span:last-child').innerHTML  = formatoReal(impostoIpi)
 		seleciona('.total span:last-child').innerHTML    = formatoReal(valorTotal)
 
 	} else {
@@ -274,9 +279,25 @@ const atualizarCarrinho = () => {
 const finalizarCompra = () => {
     seleciona('.cart--finalizar').addEventListener('click', () => {
         console.log('Finalizar compra')
+        
+        function abreModal(e) {
+            const abrirModal = document.querySelector('.modal-confirmar');
+            abrirModal.classList.add('show');
+            abrirModal.style.display = 'block';
+        }
+
+        function closeModal() {
+            const fecharModal = document.querySelector('.fechar-modal');
+            Button.addEventListener('click', fecharModal)
+            modal.style.display = 'none';
+        }
+        
         seleciona('aside').classList.remove('show')
         seleciona('aside').style.left = '100vw'
         seleciona('header').style.display = 'flex'
+        
+        abreModal()
+        closeModal()
     })
 }
 

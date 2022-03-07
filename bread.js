@@ -3,7 +3,7 @@ let breadJson = [
         id: 1,
         name: 'Sourdough Abobora',
         img: 'images/sourdough-abobora.jpg',
-        price: [24.00, 16.00, 8.00],
+        price: [8.00, 16.00, 20.00],
         sizes: [
             '100g', 
             '350g',
@@ -27,7 +27,7 @@ let breadJson = [
         id:3,
         name:'Sourdough Integral',
         img:'images/sourdough-integral.jpg',
-        price: [24.00, 16.00, 8.00],
+        price: [8.00, 16.00, 24.00],
         sizes: [
             '100g', 
             '350g',
@@ -39,7 +39,7 @@ let breadJson = [
         id:4,
         name:'Brioche',
         img:'images/brioche.jpg',
-        price: [24.00, 16.00, 8.00],
+        price: [8.00, 16.00, 20.00],
         sizes: [
             '100g', 
             '350g',
@@ -51,7 +51,7 @@ let breadJson = [
         id:5,
         name:'Bagette',
         img:'images/baguette.jpg',
-        price: [24.00, 16.00, 8.00],
+        price: [8.00, 16.00, 20.00],
         sizes: [
             '100g', 
             '350g',
@@ -63,7 +63,7 @@ let breadJson = [
         id:6,
         name:'Foccacia',
         img:'images/foccacia.jpg',
-        price: [24.00, 16.00, 8.00],
+        price: [8.00, 16.00, 20.00],
         sizes: [
             '100g', 
             '350g',
@@ -75,7 +75,7 @@ let breadJson = [
         id:7,
         name:'Super Babka',
         img:'images/receita-pao-doce-nutella-babka.jpg',
-        price: [24.00, 16.00, 8.00],
+        price: [8.00, 16.00, 20.00],
         sizes: [
             '100g', 
             '350g',
@@ -87,7 +87,7 @@ let breadJson = [
         id:8,
         name:'Sourdough Batata Doce',
         img:'images/sourdough-batata-doce.jpg',
-        price: [24.00, 16.00, 8.00],
+        price: [8.00, 16.00, 20.00],
         sizes: [
             '100g', 
             '350g',

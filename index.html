@@ -76,11 +76,35 @@
                     <span>Total</span>
                     <span>R$ --</span>
                 </div>
-                <div class="cart--finalizar">Finalizar a compra</div>
             </div>
+
+            <button class="cart--finalizar">Deseja Realizar a Compra</button>  
+            <div class="modal-confirmar">
+                <header>
+                    <h2>Confirmação</h2>
+                    <span class="fechar-modal">x</span>
+                </header>
+                <div class="corpo-modal">
+                    <p>Deseja realmente finalizar o pedido?</p>
+                </div>
+                <footer>
+                    <button onclick="close()" class="fechar-modal">Cancelar</button>
+                    <button onclick="open()" class="fechar-modal">Confirmar</button>
+                </footer>
+            </div> 
         </div>
     </aside>
     <!-- /aside do carrinho -->
+
+    <!-- Janela modal deseja realmente realizar a compra -->
+    <div class="modal">
+        <div class="modal--content">
+            <div class="modal--title">Deseja realmente finalizar a compra?</div>
+            <div class="modal--btns">
+                <button class="modal--btn">Sim</button>
+                <button class="modal--btn">Não</button>
+            </div>
+        </div>
 
     <!-- janela modal .breadWindowArea -->
     <div class="breadWindowArea">

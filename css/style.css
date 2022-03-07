@@ -517,3 +517,59 @@ h1, h2 {
 #img-logo {
     width: 50px;
 }
+
+/* modal confirmar compra */
+.modal-confirmar {
+   position: fixed;
+   z-index: 10;
+   width: 32vw;
+   height: 36vh;
+   left: 25vw;
+   top: 50vh;
+   transform: translateY(-25%);
+   padding: 1rem;
+   border: 1px solid #0c0c09;
+   background-color: rgb(255, 255, 255);
+   border-radius: 5px;
+   box-shadow: 4px 4px 8px rgb(187, 177, 42);
+   display: none;
+   animation: animate0;
+}
+
+@keyframes animate{
+    from{opacity: 1;}
+    from{opacity: 0;}
+}
+
+.corpo-modal{
+    padding: 1em 0;
+}
+
+.modal-confirmar h2{
+    display: flex;
+    text-align: center;
+    margin-left: 5em;
+}
+
+.modal-confirmar p{
+    display: flex;
+    text-align: center;
+    margin-left: 5em;
+    margin-top: 5em;
+}
+
+span.fechar-modal{
+    width: 1.50em;
+    height: 1.50em;
+    justify-content: center;
+    float: right;
+    margin-right: 1%;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+button .fechar-modal{
+    display: none;
+}
