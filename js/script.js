@@ -239,6 +239,7 @@ const atualizarCarrinho = () => {
 				} else {
 					// remover se for zero
 					cart.splice(i, 1)
+                    alert('deseja realmente excluir o item da lista?')
 				}
                 
                 (cart.length < 1) ? seleciona('header').style.display = 'flex' : ''
